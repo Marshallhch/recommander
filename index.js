@@ -15,17 +15,17 @@ app.get('/', (req, res) => {
 app.get('/random/:count', (req, res) => {
   try {
     const scriptPath = path.join(__dirname, 'resolver.py');
-    const pythonPath = path.join(
-      'C:',
-      'conda',
-      'envs',
-      'recon_env',
-      'python.exe'
-    );
+    // const pythonPath = path.join(
+    //   'C:',
+    //   'conda',
+    //   'envs',
+    //   'recon_env',
+    //   'python.exe'
+    // );
 
     // test 1
 
-    // const pythonPath = path.join('/home/ubuntu/miniconda', 'envs', 'myenv', 'bin', 'python3');
+    const pythonPath = path.join('/home/ubuntu/miniconda', 'envs', 'myenv', 'bin', 'python3');
 
     const count = req.params.count;
     const result = spawn(pythonPath, [scriptPath, 'random', count]);
