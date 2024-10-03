@@ -25,7 +25,7 @@ app.get('/random/:count', (req, res) => {
 
     // test 1
 
-    const pythonPath = path.join(__dirname, 'venv', 'bin', 'python3');
+    const pythonPath = path.join(__dirname, 'miniconda3', 'envs', 'myenv', 'bin', 'python3');
 
     const count = req.params.count;
     const result = spawn(pythonPath, [scriptPath, 'random', count]);
@@ -66,7 +66,7 @@ app.get('/latest/:count', (req, res) => {
     //   'python.exe'
     // );
 
-    const pythonPath = path.join(__dirname, 'venv', 'bin', 'python3');
+    const pythonPath = path.join(__dirname, 'miniconda3', 'envs', 'myenv', 'bin', 'python3');
 
     const count = req.params.count;
     const result = spawn(pythonPath, [scriptPath, 'latest', count]);
@@ -107,7 +107,7 @@ app.get('/genres/:genre/:count', (req, res) => {
     //   'python.exe'
     // );
 
-    const pythonPath = path.join(__dirname, 'venv', 'bin', 'python3');
+    const pythonPath = path.join(__dirname, 'miniconda3', 'envs', 'myenv', 'bin', 'python3');
 
     const genre = req.params.genre;
     const count = req.params.count;
@@ -149,7 +149,7 @@ app.get('/item-based/:item', (req, res) => {
     //   'python.exe'
     // );
 
-    const pythonPath = path.join(__dirname, 'venv', 'bin', 'python3');
+    const pythonPath = path.join(__dirname, 'miniconda3', 'envs', 'myenv', 'bin', 'python3');
 
     const item = req.params.item;
     const result = spawn(pythonPath, [scriptPath, 'item-based', item]);
