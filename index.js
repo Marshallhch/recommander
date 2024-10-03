@@ -58,15 +58,15 @@ app.get('/random/:count', (req, res) => {
 app.get('/latest/:count', (req, res) => {
   try {
     const scriptPath = path.join(__dirname, 'resolver.py');
-    const pythonPath = path.join(
-      'C:',
-      'conda',
-      'envs',
-      'recon_env',
-      'python.exe'
-    );
+    // const pythonPath = path.join(
+    //   'C:',
+    //   'conda',
+    //   'envs',
+    //   'recon_env',
+    //   'python.exe'
+    // );
 
-    // const pythonPath = path.join('/home/ubuntu/miniconda', 'envs', 'myenv', 'bin', 'python3');
+    const pythonPath = path.join('/home/ubuntu/miniconda', 'envs', 'myenv', 'bin', 'python3');
 
     const count = req.params.count;
     const result = spawn(pythonPath, [scriptPath, 'latest', count]);
@@ -99,15 +99,15 @@ app.get('/latest/:count', (req, res) => {
 app.get('/genres/:genre/:count', (req, res) => {
   try {
     const scriptPath = path.join(__dirname, 'resolver.py');
-    const pythonPath = path.join(
-      'C:',
-      'conda',
-      'envs',
-      'recon_env',
-      'python.exe'
-    );
+    // const pythonPath = path.join(
+    //   'C:',
+    //   'conda',
+    //   'envs',
+    //   'recon_env',
+    //   'python.exe'
+    // );
 
-    // const pythonPath = path.join('/home/ubuntu/miniconda', 'envs', 'myenv', 'bin', 'python3');
+    const pythonPath = path.join('/home/ubuntu/miniconda', 'envs', 'myenv', 'bin', 'python3');
 
     const genre = req.params.genre;
     const count = req.params.count;
@@ -141,15 +141,15 @@ app.get('/genres/:genre/:count', (req, res) => {
 app.get('/item-based/:item', (req, res) => {
   try {
     const scriptPath = path.join(__dirname, 'recommender.py');
-    const pythonPath = path.join(
-      'C:',
-      'conda',
-      'envs',
-      'recon_env',
-      'python.exe'
-    );
+    // const pythonPath = path.join(
+    //   'C:',
+    //   'conda',
+    //   'envs',
+    //   'recon_env',
+    //   'python.exe'
+    // );
 
-    // const pythonPath = path.join('/home/ubuntu/miniconda', 'envs', 'myenv', 'bin', 'python3');
+    const pythonPath = path.join('/home/ubuntu/miniconda', 'envs', 'myenv', 'bin', 'python3');
 
     const item = req.params.item;
     const result = spawn(pythonPath, [scriptPath, 'item-based', item]);
@@ -182,15 +182,15 @@ app.get('/item-based/:item', (req, res) => {
 app.post('/user-based', (req, res) => {
   try {
     const scriptPath = path.join(__dirname, 'recommender.py');
-    const pythonPath = path.join(
-      'C:',
-      'conda',
-      'envs',
-      'recon_env',
-      'python.exe'
-    );
+    // const pythonPath = path.join(
+    //   'C:',
+    //   'conda',
+    //   'envs',
+    //   'recon_env',
+    //   'python.exe'
+    // );
 
-    // const pythonPath = path.join('/home/ubuntu/miniconda', 'envs', 'myenv', 'bin', 'python3');
+    const pythonPath = path.join('/home/ubuntu/miniconda', 'envs', 'myenv', 'bin', 'python3');
 
     const inputRatingDict = req.body; // JSON 데이터를 받아옴
 
