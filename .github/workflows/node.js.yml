@@ -39,7 +39,7 @@ jobs:
       - name: Set up Conda environment
         run: |
           eval "$($HOME/miniconda/bin/conda shell.bash hook)"
-          conda create -n myenv python=3.12
+          conda create -n myenv python=3.11
           conda activate myenv
 
       # Install Python dependencies (if you have a requirements.txt file)
